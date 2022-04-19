@@ -13,7 +13,7 @@ if (window.ethereum && window.ethereum.isMetaMask) {
 );
 
 } else {
-  console.log('Please install MetaMask!'+provider);
+  console.log('Please install MetaMask!');
 }
 
 // If you want to start measuring performance in your app, pass a function
