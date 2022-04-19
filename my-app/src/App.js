@@ -12,7 +12,7 @@ function App() {
 
   //Sending Ethereum to an address
   async function sendEthButton() { 
-    if (typeof ethereum !== 'undefined') {
+    // eslint-disable-next-line no-undef
     ethereum
       .request({
         method: 'eth_sendTransaction',
@@ -26,13 +26,11 @@ function App() {
       })
       .then((txHash) => console.log(txHash))
       .catch((error) => console.error);
-    }
   }
 
   async function getAccount() {
-    if (typeof ethereum !== 'undefined') {
+    // eslint-disable-next-line no-undef
     accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-    }
   }
 
   return (
